@@ -1,0 +1,37 @@
+@import "./../../../assets/sass/mixins";
+
+.card {
+    max-width: 335px;
+    background-color: white;
+    padding: 30px 25px;
+    @include boxshadow( 0px 10px 19px -1px rgba(0,0,0,0.24));
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+    img{
+        // margin:0 auto;
+    }
+
+    h3{
+        text-align:center;
+        color:var(--blue-title);
+        font-weight: 700;
+        margin-top:40px;
+        font-size:30px;
+    }
+
+    h5{
+        text-align: center;
+        font-weight:300;
+        font-size: 24px;
+        margin:20px auto;
+    }
+
+    p{
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+    }
+}

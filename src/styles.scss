@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import "./assets/sass/mixins";
+
+:root {
+    --blue:#1757b5;
+    --gray: #fbfbfb;
+    --blue-title: #0d3979;
+}
+
+body {
+    font-family: Raleway;
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 50px;
+    display: inline-block;
+    margin-bottom: 50px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: var(--blue);
+    }
+}
+
+.btn-blue {
+    background-color: var(--blue);
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    border: 2px solid transparent;
+
+    @include transition(background-color 0.2s linear);
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // @include boxshadow();
+    &:hover {
+        background-color: white;
+        color: var(--blue);
+        border-color: var(--blue);
+    }
+}
+
+.owl-carousel {
+    margin-top: 50px;
+
+    .owl-dots {
+        [class*="owl-"] {
+            span {
+                background-color: var(--blue);
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+//estilos sección acerca de mi
+
+.about-me {
+    padding: 8% 0px;
+
+    .imagen {
+        position: relative;
+        display: inline-block;
+
+        img {
+            z-index: 9;
+            position: relative;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8%;
+            left: -8%;
+            width: 100%;
+            height: 100%;
+            border: 8px solid var(--blue);
+            border-radius: 10px;
+            z-index: 2;
+        }
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+.experiencia {
+    background-color: var(--gray);
+    padding: 8% 0px;
+}
+
+.recomendaciones{
+    padding: 8% 0px;
+}

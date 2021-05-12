@@ -1,0 +1,26 @@
+.header{
+    background-image: url(/assets/images/header-portafolio.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        color: white;
+        font-weight: 600;
+        font-size: 150px;
+    }
+
+    h3{
+        color: white;
+        font-weight: 400;
+        font-size: 80px;
+    }
+
+    .btn-blue{
+        width:320px;
+        height: 60px;
+    }
+}
