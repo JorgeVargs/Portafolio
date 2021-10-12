@@ -6,34 +6,37 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-   scrolled: boolean = false;
+  scrolled: boolean = false;
 
-  public isShown:boolean;
-  public texto:string;
+  public isShown: boolean;
+  public winWidth: number = 0;
 
-  constructor() { 
+  constructor() {
     this.isShown = false;
-    this.texto = "Hola";
   }
 
-  changeState(){
+  changeState() {
     this.isShown = !this.isShown;
   }
-  
+
   currentSection = 'section1';
 
-   onSectionChange(sectionId: string) {
+  onSectionChange(sectionId: string) {
     this.currentSection = sectionId;
     console.log(this.currentSection);
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
+  @HostListener('window:scroll', []) onWindowScroll() {
     this.scrolled = window.pageYOffset > 150;
-    if(this.scrolled){
+    if (this.scrolled) {
       console.log(this.scrolled);
-    }else{
+    } else {
       this.scrolled = false;
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: any; }; }) {
+    this.winWidth = event.target.innerWidth;
   }
 }
