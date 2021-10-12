@@ -3,11 +3,12 @@
         <a class="navbar-brand" href="#">
             <img src="assets/images/logo-luis-vargas.png" class="img-fluid" alt="logo luis vargas" />
         </a>
-        <button class="navbar-toggler" (click)="changeState()"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <!-- <button class="navbar-toggler" (click)="changeState()"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </button> -->
+        <span (click)="changeState()">open</span>
+        <div class="navbar-collapse collapse" [ngClass]="{'show': isShown}" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#about-me">Acerca de Mí</a>
