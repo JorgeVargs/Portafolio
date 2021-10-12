@@ -9,9 +9,11 @@ export class HeaderComponent {
   
   public titulo: string;
   public puesto: string;
+  public cv: string;
 
   constructor() {
     this.titulo = "Luis Vargas";
-    this.puesto = "Web Developer";
+    this.puesto = "Desarrollador Front-End";
+    this.cv = "./assets/curriculum-vitae-jorge-luis-vargas.pdf";
    }
 }

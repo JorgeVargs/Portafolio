@@ -1,0 +1,17 @@
+<section id="portafolio" class="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Portafolio</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-4" *ngFor="let proyecto of proyectos">
+                <a href="{{ proyecto.url }}" target="_blank" class="proyecto">
+                    <img src="{{ proyecto.screen }}" class="img-fluid" />
+                    <p><strong>{{ proyecto.nombre }}</strong> {{ proyecto.tecnologia }} </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

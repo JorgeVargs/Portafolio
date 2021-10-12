@@ -1,0 +1,15 @@
+@import '../../../assets/sass/mixins';
+
+.skill{
+    width:160px;
+    height: 160px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 50%;
+    @include boxshadow(0px 10px 22px -4px rgba(0,0,0,0.75));
+
+    @include for_breakpoint(480) {
+        width:130px;
+        height: 130px;
+    }
+}

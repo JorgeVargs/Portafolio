@@ -1,9 +1,15 @@
+@import "../../../assets/sass/mixins";
+
 .ml-auto {
     margin-left: auto;
 }
 
 .navbar {
     height: 120px;
+    background-color: white;
+
+    @include boxshadow(0px 11px 15px -6px rgba(0, 0, 0, 0.6));
+    @include transition(height .3s linear);
 
     .navbar-brand {
         img {
@@ -21,11 +27,19 @@
                 font-size: 22px;
             }
 
+            &.active {
+                &::after {
+                    background-color: var(--blue);
+                }
+            }
+
             &.btn-blue {
                 height: 50px;
+
                 .nav-link {
                     color: white;
-                    &:hover{
+
+                    &:hover {
                         color: var(--blue);
                     }
                 }
@@ -41,6 +55,24 @@
             &:hover {
                 &::after {
                     background-color: var(--blue);
+                }
+            }
+        }
+    }
+
+    &.small {
+        height: 80px;
+        // background-color: var(--blue);
+        .navbar-brand {
+            img {
+                max-width: 60%;
+            }
+        }
+
+        .collapse {
+            .nav-item {
+                .nav-link {
+                    font-size: 18px;
                 }
             }
         }

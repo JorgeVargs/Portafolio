@@ -1,0 +1,31 @@
+@import "./../../../assets/sass/mixins";
+
+form{
+    text-align: left;
+    label{
+        font-size: 22px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea{
+        border-radius: 0px;
+        border:0px;
+        border-bottom: 1px solid var(--blue);
+
+        &:active,
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+    .btn-blue{
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px;
+        width: 200px;
+        height: 55px;
+        font-size: 26px;
+        @include boxshadow( 0px 11px 15px -6px rgba(0,0,0,0.6));
+    }
+}
