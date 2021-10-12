@@ -30,6 +30,7 @@ export class NavbarComponent {
     this.scrolled = window.pageYOffset > 150;
     if (this.scrolled) {
       console.log(this.scrolled);
+      this.isShown = false;
     } else {
       this.scrolled = false;
     }

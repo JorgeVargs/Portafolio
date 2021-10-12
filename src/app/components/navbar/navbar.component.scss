@@ -139,6 +139,36 @@
         }
       }
     }
+    
+    @include for_breakpoint(991) {
+       background-color: white;
+        padding: 5%;
+        @include boxshadow(0px 11px 15px -6px rgb(0 0 0 / 60%));
+       .navbar-nav{
+           text-align: center;
+
+           .nav-item{      
+               margin: 10px 0px;
+            &::after{
+                width:20%;
+                margin: auto;
+            }
+
+            &.btn-blue{
+                width: 200px;
+                margin: auto;
+                text-align: center;
+                &::after{
+                    display: none;
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                }
+            }
+           }
+       }
+    }
   }
 
   &.small {
