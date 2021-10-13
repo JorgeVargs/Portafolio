@@ -55,7 +55,7 @@ export class WorkExperienceComponent implements OnInit {
   owlOptions: OwlOptions = {
       loop: false,
       mouseDrag: false,
-      touchDrag: false,
+      touchDrag: true,
       pullDrag: false,
       dots: true,
       navSpeed: 700,

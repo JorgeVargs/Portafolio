@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent{
   public proyectos:any = [
+    {
+      screen:"./assets/images/proyectos/banners.png",
+      nombre:"Banners (Google & Amazon)",
+      tecnologia:"Google Web Designer (HTML5)"
+    },
      {
       screen:"./assets/images/proyectos/hersheys-reposteria.png",
       nombre:"hershey's Repostería",
@@ -36,6 +41,24 @@ export class ProjectsComponent{
       nombre:"Ms&Media",
       tecnologia:"Bootstrap & Wordpress",
       url:"https://msmedia.com.mx/publicidad-exterior/"
+    },
+    {
+      screen:"./assets/images/proyectos/openfinancehub.png",
+      nombre:"Open Finance Hub",
+      tecnologia:"Bootstrap & Wordpress",
+      url:"https://cecoban.com/openfinancehub/"
+    },
+    {
+      screen:"./assets/images/proyectos/periferico1991.png",
+      nombre:"Landing Periferico 1991",
+      tecnologia:"Landing Page: HTML, Jquery, CSS, PHP",
+      url:"https://my-home.mx/periferico1991/"
+    },
+    {
+      screen:"./assets/images/proyectos/olimpiadasespeciales.png",
+      nombre:"Olimpiadas Especiales",
+      tecnologia:"Bootstrap & Wordpress",
+      url:"https://specialolympics.org.mx/"
     },
   ];
   constructor() { }
