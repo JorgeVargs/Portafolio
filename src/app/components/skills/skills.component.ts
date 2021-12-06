@@ -55,6 +55,14 @@ export class SkillsComponent {
      {
       logo:"./assets/images/skills/mailchimp.png",
       nombre:"MAILCHIMP"
+    },
+    {
+      logo:"./assets/images/skills/angular.png",
+      nombre:"ANGULAR"
+    },
+    {
+      logo:"./assets/images/skills/mysql.png",
+      nombre:"MYSQL"
     }
   ];
 

@@ -1,7 +1,7 @@
 <section class="header">
-    <h1>{{titulo}}</h1>
-    <h3>{{puesto}}</h3>
-    <a href="{{ cv }}" target="_blank" class="btn btn-blue">Descargar CV</a>
+    <h1 class="animate__animated  animate__backInDown">{{titulo}}</h1>
+    <h3 class="animate__animated animate__backInLeft animate__delay-1s">{{puesto}}</h3>
+    <a href="{{ cv }}" target="_blank" class="btn btn-blue animate__animated animate__fadeInUp">Descargar CV</a>
 </section>
 
 <section id="about-me" class="about-me">
@@ -12,7 +12,7 @@
                     <img src="assets/images/about-me.png" class="img-fluid m-auto" alt="Acerca de mí" />
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 animate__animated animate__fadeInUp">
                 <h2>Acerca de Mí</h2>
                 <p>Soy una persona que está en busca de nuevos retos profesionales, uno de mis objetivos es seguir aprendiendo de este basto mundo de las <strong>tecnologías de desarrollo web</strong>. De igual manera considero que podría aportar mis conocimientos en los proyectos, así como también aprender de ellos.</p>
                 <p>Actualmente me desempeño como desarrollador <strong>Front-End</strong>, y estoy dispuesto a seguir aprendiendo para mejorar en cada uno de los proyectos tanto personales como profesionales.</p>
@@ -20,3 +20,11 @@
         </div>
     </div>
 </section>
+
+<app-work-experience></app-work-experience>
+
+<app-skills></app-skills>
+
+<app-projects></app-projects>
+
+<app-contacto></app-contacto>
