@@ -16,7 +16,10 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
+
 import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
+import { AboutMeComponent } from './components/Dashboard/about-me/about-me.component';
+import { ExperienceComponent } from './components/Dashboard/experience/experience.component';
 
 
 @NgModule({//decorador
@@ -29,7 +32,9 @@ import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.c
     ProjectsComponent,
     ContactoComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    AboutMeComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,7 @@ import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.c
     CarouselModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

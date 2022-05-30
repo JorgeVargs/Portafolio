@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent{
   public proyectos:any = [
     {
+      screen:"./assets/images/proyectos/anafloresabogada.png",
+      nombre:"Ana Flores Abogada",
+      tecnologia:"Bootstrap & Wordpress",
+      url:"https://anafloresabogada.com/"
+    },
+    {
       screen:"./assets/images/proyectos/banners.png",
       nombre:"Banners (Google & Amazon)",
       tecnologia:"Google Web Designer (HTML5)"

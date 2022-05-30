@@ -1,0 +1,36 @@
+<section class="container menu-dash pt-10 pb-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <H1>Acerca de Mi</H1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Acerca de Mi</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="assets/images/about-me.png" class="img-fluid" />
+              
+
+        </div>
+        <div class="col-8">
+          <form [formGroup]="formAboutMe">
+            <div class="mt-5">
+                <label for="titulo" class="form-label">Título:</label>
+                <input type="text" name="titulo"  formControlName="titulo" class="form-control">
+            </div>
+            <div class="mt-5">
+                <label for="descripcion" class="form-label">Descripción:</label>
+               
+            </div>
+          </form>
+        </div>
+    </div>
+</section>
