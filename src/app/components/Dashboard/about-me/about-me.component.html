@@ -17,8 +17,6 @@
     <div class="row">
         <div class="col-lg-4">
             <img src="assets/images/about-me.png" class="img-fluid" />
-              
-
         </div>
         <div class="col-8">
           <form [formGroup]="formAboutMe">
@@ -28,9 +26,29 @@
             </div>
             <div class="mt-5">
                 <label for="descripcion" class="form-label">Descripción:</label>
+                <editor apiKey="uekaen7rfwenkvfdv05s40nqez1ptzbzczlkby1sqc1nje6p"
+                  [init]="{
+                    height: 500,
+                    menubar: false,
+                    plugins: [
+                      'advlist autolink lists link image charmap print preview anchor',
+                      'searchreplace visualblocks code fullscreen',
+                      'insertdatetime media table paste code help wordcount'
+                    ],
+                    toolbar:
+                      'undo redo | formatselect | bold italic backcolor | \
+                      alignleft aligncenter alignright alignjustify | \
+                      bullist numlist outdent indent | removeformat | help'
+                  }"
+                ></editor>
+
+               
                
             </div>
           </form>
+        </div>
+        <div class="col-12 mt-5">
+            <a href="#" class="btn btn-blue animate__animated animate__fadeInUp">Actualizar</a>
         </div>
     </div>
 </section>

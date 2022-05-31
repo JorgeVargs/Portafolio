@@ -8,6 +8,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CarouselModule} from 'ngx-owl-carousel-o';
+import { EditorModule } from '@tinymce/tinymce-angular'
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -44,6 +46,7 @@ import { ExperienceComponent } from './components/Dashboard/experience/experienc
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
