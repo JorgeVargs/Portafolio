@@ -66,6 +66,12 @@ export class ProjectsComponent{
       tecnologia:"Bootstrap & Wordpress",
       url:"https://specialolympics.org.mx/"
     },
+    {
+      screen:"./assets/images/proyectos/superior-56.jpg",
+      nombre: "Superior 56",
+      tecnologia: "Angular",
+      url:"https://dev.superior56.com.mx/"
+    }
   ];
   constructor() { }
 }
