@@ -825,6 +825,12 @@ class ProjectsComponent {
     constructor() {
         this.proyectos = [
             {
+                screen: "./assets/images/proyectos/superior-56.jpg",
+                nombre: "Superior 56",
+                tecnologia: "Angular",
+                url: "https://superior56.com.mx/"
+            },
+            {
                 screen: "./assets/images/proyectos/anafloresabogada.png",
                 nombre: "Ana Flores Abogada",
                 tecnologia: "Bootstrap & Wordpress",
@@ -882,12 +888,6 @@ class ProjectsComponent {
                 nombre: "Olimpiadas Especiales",
                 tecnologia: "Bootstrap & Wordpress",
                 url: "https://specialolympics.org.mx/"
-            },
-            {
-                screen: "./assets/images/proyectos/superior-56.jpg",
-                nombre: "Superior 56",
-                tecnologia: "Angular",
-                url: "https://dev.superior56.com.mx/"
             }
         ];
     }

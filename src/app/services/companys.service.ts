@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { DataServices } from './data.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompanysService {
 
-  constructor() { }
+  constructor(private dataService:DataServices) { 
+  }
 
   private companys:any = [
     {
@@ -22,7 +24,7 @@ export class CompanysService {
     },
     {
       //publicidad en línea
-      logo:"./assets/images/clickspublicitarios.jpg",
+      logo:"./assets/images/publicidadenlinea.jpg",
       puesto:"Desarrollador Web",
       periodo:"2017 - 2019",
       descripcion:"Maquetación, integración, mantenimiento de sitios web."
@@ -52,4 +54,9 @@ export class CompanysService {
   getCompanys(){
     return this.companys;
   }
+
+  agregarCompany(){
+    this.dataService.guardarCompanys(this.companys);
+  }
+
 }

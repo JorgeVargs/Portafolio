@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent{
   public proyectos:any = [
     {
+      screen:"./assets/images/proyectos/superior-56.jpg",
+      nombre: "Superior 56",
+      tecnologia: "Angular",
+      url:"https://superior56.com.mx/"
+    },
+    {
       screen:"./assets/images/proyectos/anafloresabogada.png",
       nombre:"Ana Flores Abogada",
       tecnologia:"Bootstrap & Wordpress",
@@ -65,12 +71,6 @@ export class ProjectsComponent{
       nombre:"Olimpiadas Especiales",
       tecnologia:"Bootstrap & Wordpress",
       url:"https://specialolympics.org.mx/"
-    },
-    {
-      screen:"./assets/images/proyectos/superior-56.jpg",
-      nombre: "Superior 56",
-      tecnologia: "Angular",
-      url:"https://dev.superior56.com.mx/"
     }
   ];
   constructor() { }

@@ -12,16 +12,17 @@ import { EditorModule } from '@tinymce/tinymce-angular'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponent } from './components/header/header.component';
-import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
+import { HeaderComponent } from './components/Landing/header/header.component';
+import { WorkExperienceComponent } from './components/Landing/work-experience/work-experience.component';
+import { SkillsComponent } from './components/Landing/skills/skills.component';
+import { ProjectsComponent } from './components/Landing/projects/projects.component';
+import { ContactoComponent } from './components/Landing/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
 import { AboutMeComponent } from './components/Dashboard/about-me/about-me.component';
 import { ExperienceComponent } from './components/Dashboard/experience/experience.component';
+import { DataServices } from './services/data.service';
 
 
 @NgModule({//decorador
@@ -48,7 +49,7 @@ import { ExperienceComponent } from './components/Dashboard/experience/experienc
     HttpClientModule,
     EditorModule
   ],
-  providers: [],
+  providers: [DataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

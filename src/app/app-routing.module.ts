@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
 import { AboutMeComponent } from './components/Dashboard/about-me/about-me.component';
 import { ExperienceComponent } from './components/Dashboard/experience/experience.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/Landing/header/header.component';
 
 const routes: Routes = [
   { path: '', component: HeaderComponent,},

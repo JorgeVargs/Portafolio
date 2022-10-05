@@ -66,5 +66,7 @@ export class SkillsComponent {
     }
   ];
 
-  constructor() { }
+  constructor() { 
+    
+  }
 }
