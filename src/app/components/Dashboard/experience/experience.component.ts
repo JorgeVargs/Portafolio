@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ICompanys } from 'src/app/interfaces/ICompanys';
 import { DataServices } from 'src/app/services/data.service';
 
@@ -13,7 +13,7 @@ export class ExperienceComponent implements OnInit {
 
   constructor(
     private dataService:DataServices,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
     ) { }
 
   formExperience: any;
@@ -22,10 +22,10 @@ export class ExperienceComponent implements OnInit {
   }
 
   initForm(){
-    this.formExperience = new FormGroup({
-      namecompany: new FormControl('',[Validators.required]),
-      rangofechas: new FormControl('',[Validators.required]),
-      descripcion: new FormControl('',[Validators.required])
+    this.formExperience = new UntypedFormGroup({
+      namecompany: new UntypedFormControl('',[Validators.required]),
+      rangofechas: new UntypedFormControl('',[Validators.required]),
+      descripcion: new UntypedFormControl('',[Validators.required])
     })
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormGroupName, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, FormGroupName, Validators } from '@angular/forms';
 import { EditorComponent } from '@tinymce/tinymce-angular';
 
 @Component({
@@ -20,10 +20,10 @@ export class AboutMeComponent {
   }
 
   initForm(){
-    this.formAboutMe= new FormGroup({
-      nombre: new FormControl('',[Validators.required,Validators.minLength(10)]),
-      email: new FormControl('',[Validators.required,Validators.email]),
-      mensaje: new FormControl('',[Validators.required,Validators.minLength(10)])
+    this.formAboutMe= new UntypedFormGroup({
+      nombre: new UntypedFormControl('',[Validators.required,Validators.minLength(10)]),
+      email: new UntypedFormControl('',[Validators.required,Validators.email]),
+      mensaje: new UntypedFormControl('',[Validators.required,Validators.minLength(10)])
     })
   }
 }

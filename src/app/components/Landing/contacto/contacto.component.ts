@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormGroupName, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, FormGroupName, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
@@ -18,10 +18,10 @@ export class ContactoComponent implements OnInit{
   }
 
   initForm(){
-    this.formDatos= new FormGroup({
-      nombre: new FormControl('',[Validators.required,Validators.minLength(10)]),
-      email: new FormControl('',[Validators.required,Validators.email]),
-      mensaje: new FormControl('',[Validators.required,Validators.minLength(10)])
+    this.formDatos= new UntypedFormGroup({
+      nombre: new UntypedFormControl('',[Validators.required,Validators.minLength(10)]),
+      email: new UntypedFormControl('',[Validators.required,Validators.email]),
+      mensaje: new UntypedFormControl('',[Validators.required,Validators.minLength(10)])
     })
   }
 
