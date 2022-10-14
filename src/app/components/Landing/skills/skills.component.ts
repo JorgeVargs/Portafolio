@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgsRevealService } from 'ngx-scrollreveal';
 
 @Component({
   selector: 'app-skills',
@@ -67,6 +68,7 @@ export class SkillsComponent {
   ];
 
   constructor() { 
-    
+   
+ 
   }
 }

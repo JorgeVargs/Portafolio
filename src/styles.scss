@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
-@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import "bootstrap/scss/bootstrap";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 @import "./assets/sass/mixins";
-@import "~animate.css/animate.min";
+@import "animate.css/animate.min";
 
 :root {
     --blue:#1757b5;

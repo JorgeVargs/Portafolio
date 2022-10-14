@@ -1,6 +1,7 @@
 export interface ICompanys {
-    logo: string,
-    puesto: string,
-    periodo: string,
+    id?:string,
+    imagecompany: string,
+    puestocompany: string,
+    rangofechas: string,
     descripcion: string
 }

@@ -8,7 +8,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CarouselModule} from 'ngx-owl-carousel-o';
-import { EditorModule } from '@tinymce/tinymce-angular'
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -23,6 +24,9 @@ import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.c
 import { AboutMeComponent } from './components/Dashboard/about-me/about-me.component';
 import { ExperienceComponent } from './components/Dashboard/experience/experience.component';
 import { DataServices } from './services/data.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({//decorador
@@ -47,7 +51,10 @@ import { DataServices } from './services/data.service';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    EditorModule
+    EditorModule,
+    NgsRevealModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [DataServices],
   bootstrap: [AppComponent]

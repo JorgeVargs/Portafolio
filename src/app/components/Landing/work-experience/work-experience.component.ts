@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Observable } from 'rxjs';
+import { ICompanys } from 'src/app/interfaces/ICompanys';
 import { CompanysService } from 'src/app/services/companys.service';
 
 @Component({
@@ -8,8 +10,8 @@ import { CompanysService } from 'src/app/services/companys.service';
   styleUrls: ['./work-experience.component.scss']
 })
 export class WorkExperienceComponent implements OnInit {
-
-  companys:any[] = [];
+  companys: ICompanys[] = [];
+  
   constructor(
     private _companysService:CompanysService
   ) {}
@@ -37,7 +39,9 @@ export class WorkExperienceComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.companys = this._companysService.getCompanys();
+    this._companysService.getCompany().subscribe(companys =>{
+      this.companys = companys;
+  });  
   }
 
 }

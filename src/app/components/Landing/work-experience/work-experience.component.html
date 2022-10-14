@@ -11,9 +11,9 @@
             <owl-carousel-o [options]="owlOptions">
                 <ng-template carouselSlide *ngFor="let company of companys">
                     <div class="slide card">
-                        <img src="{{ company.logo }}" alt="Content 1">
-                        <h3>{{ company.puesto }}</h3>
-                        <h5>{{ company.periodo }}</h5>
+                        <img src="{{ company.imagecompany }}" alt="Content 1">
+                        <h3>{{ company.puestocompany }}</h3>
+                        <h5>{{ company.rangofechas }}</h5>
                         <p>{{ company.descripcion }}</p>
                     </div>
                 </ng-template>

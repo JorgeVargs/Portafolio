@@ -9,13 +9,12 @@
         <div class="row">
             <div class="col-8 offset-2 col-sm-8 offset-sm-2 col-md-6 offset-md-0 d-flex justify-content-center align-items-center">
                 <div class="imagen">
-                    <img src="assets/images/about-me.png" class="img-fluid m-auto" alt="Acerca de mí" />
+                    <img src="{{ fotografia }}" class="img-fluid m-auto" alt="Acerca de mí" />
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 animate__animated animate__fadeInUp">
-                <h2>Acerca de Mí</h2>
-                <p>Soy una persona que está en busca de nuevos retos profesionales, uno de mis objetivos es seguir aprendiendo de este basto mundo de las <strong>tecnologías de desarrollo web</strong>. De igual manera considero que podría aportar mis conocimientos en los proyectos, así como también aprender de ellos.</p>
-                <p>Actualmente me desempeño como desarrollador <strong>Front-End</strong>, y estoy dispuesto a seguir aprendiendo para mejorar en cada uno de los proyectos tanto personales como profesionales.</p>
+                <h2>{{ subtitle }}</h2>
+                <div [innerHTML]="descripcion"></div>
             </div>
         </div>
     </div>

@@ -19,21 +19,21 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-8">
+        <div class="col-5">
             <form class="" [formGroup]="formExperience">
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <label for="formFile" class="form-label">Logo empresa</label>
-                        <input class="form-control"  type="file" id="formFile" />
+                        <label for="imagecompany" class="form-label">Logo empresa</label>
+                        <input class="form-control" formControlName="imagecompany" id="imagecompany"  type="file" [ngClass]="{'is-invalid': isValid('imagecompany')}" (change)="CreateBase64String($event)" />
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-6">
-                        <label for="namecompany" class="visually">Empresa:</label>
-                        <input type="text" class="form-control" formControlName="namecompany" id="namecompany" [ngClass]="{'is-invalid': isValid('namecompany')}" placeholder="" required/>
+                    <div class="col-12">
+                        <label for="puestocompany" class="visually">Puesto:</label>
+                        <input type="text" class="form-control" formControlName="puestocompany" id="puestocompany" [ngClass]="{'is-invalid': isValid('puestocompany')}" placeholder="" required/>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12">
                         <label for="rangofechas" class="visually">Fechas:</label>
                         <input type="text" class="form-control" formControlName="rangofechas" id="rangofechas" [ngClass]="{'is-invalid': isValid('rangofechas')}" placeholder="" />
                     </div>
@@ -47,46 +47,41 @@
 
                 <div class="row">
                     <div class="d-grid gap-2 d-md-block">
-                        <button (click)="agregarCompany()"  [disabled]= "formExperience.invalid" class="btn btn-primary" type="button">Agregar</button>
+                        <button (click)="agregarCompany()"  [disabled]= "formExperience.invalid" class="btn btn-primary mt-5" type="button">Agregar</button>
                       </div>
                 </div>
             </form>
         </div>
-        <div class="col-4">
+        <div class="col-7">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Logo</th>
+                    <th scope="col">Puesto</th>
+                    <th scope="col">Fechas</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let company of companys">
+                    <th scope="row">
+                        <img src="{{ company.imagecompany }}" class="img-fluid" />
+                    </th>
+                    <td>{{ company.puestocompany }}</td>
+                    <td>{{ company.rangofechas }}</td>
+                    <td>{{ company.descripcion }}</td>
+                    <td><button class="btn btn-danger" (click)="onClickDelete(company)">Borrar</button></td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
-            <table class="table table-hover mt-5">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+           
         </div>
     </div>
 </section>
