@@ -56,15 +56,17 @@ export class AboutMeComponent implements OnInit {
   }
 
   updateAbout(){
+   if(this.cardImageBase64){
     this.formAboutMe.value.fotografia = this.cardImageBase64;
+   }else{
+    this.formAboutMe.value.fotografia = this.fotografia;
+   }
     
     const response = this.aboutmeService.putAbout(this.formAboutMe.value, this.idAbout);
-
-    console.log(response);
   }
 
   uploadFile(fileInput: any) {
-    console.log(fileInput.target.files[0].length);
+
     if (fileInput.target.files && fileInput.target.files[0]) {
       const reader = new FileReader();
       reader.onload = (e: any) => {
