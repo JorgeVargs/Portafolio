@@ -7,10 +7,11 @@ import { CompanysService } from "./companys.service";
 export class DataServices{
     constructor(private httpClient:HttpClient){}
 
-    guardarCompanys(companys:ICompanys[]){
-        this.httpClient.post('https://portafolio-91-default-rtdb.firebaseio.com/datos.json',companys).subscribe(
-            Response=>console.log("Se han guardado los empleados:" + Response),
-            error=> console.log("Error: " + error),
-        );
-    }
+    // guardarCompanys(companys:ICompanys[]){
+    //     this.httpClient.post('https://portafolio-91-default-rtdb.firebaseio.com/datos.json',companys).subscribe(
+    //         Response=>console.log("Se han guardado los empleados:" + Response),
+    //         error=> console.log("Error: " + error),
+    //     );
+    // }
+    
 }

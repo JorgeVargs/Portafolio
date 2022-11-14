@@ -23,11 +23,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
 import { AboutMeComponent } from './components/Dashboard/about-me/about-me.component';
 import { ExperienceComponent } from './components/Dashboard/experience/experience.component';
+import { SkillsComponentD } from './components/Dashboard/skills/skills.component';
+
 import { DataServices } from './services/data.service';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-
+import { ProyectosComponent } from './components/Dashboard/proyectos/proyectos.component';
 
 @NgModule({//decorador
   declarations: [
@@ -41,7 +43,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     FooterComponent,
     DashboardComponent,
     AboutMeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    SkillsComponentD,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,

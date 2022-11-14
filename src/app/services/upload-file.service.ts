@@ -1,36 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UploadFileService {
-  public cardImageBase64: string;
-  isImageSaved: boolean;
 
-  constructor() {
-    this.cardImageBase64 = '';
-    this.isImageSaved = false;
-  }
+  constructor(private sanitizer: DomSanitizer) {}
 
-
-  CreateBase64String(fileInput: any) {
-    console.log(fileInput);
-    if (fileInput) {
+  //para convertir una imagen en base 64
+  extraerBase64 = async ($event: any) => new Promise((resolve) => {
+    try {
+      const unsafeImg = window.URL.createObjectURL($event);
+      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
       const reader = new FileReader();
-      reader.onload = (e: any) => {
-        const image = new Image();
-        image.src = e.target.result;
-        image.onload = rs => {
-          const imgBase64Path = e.target.result;
-          this.cardImageBase64 = imgBase64Path;
-          this.isImageSaved = true;
-        };
+      reader.readAsDataURL($event);
+      reader.onload = () => {
+        resolve({
+          base: reader.result
+        });
       };
-      reader.readAsDataURL(fileInput);
+      reader.onerror = error => {
+        resolve({
+          base: null
+        });
+      };
+      return null;
+    } catch (e) {
+      return null;
     }
-
-    return this.cardImageBase64;
-  }
+  })
 
 }

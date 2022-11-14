@@ -7,9 +7,9 @@
         </div>
         <div class="row">
             <div class="col-6 col-md-4" *ngFor="let proyecto of proyectos">
-                <a [attr.href]="proyecto.url" target="_blank" class="proyecto">
-                    <img src="{{ proyecto.screen }}" class="img-fluid" />
-                    <p><strong>{{ proyecto.nombre }}</strong> {{ proyecto.tecnologia }} </p>
+                <a [attr.href]="proyecto.urlProyecto" target="_blank" class="proyecto">
+                    <img src="{{ proyecto.imagenProyecto }}" class="img-fluid" />
+                    <p><strong>{{ proyecto.nombreProyecto }}</strong> {{ proyecto.descripcion }} </p>
                 </a>
             </div>
         </div>

@@ -7,6 +7,10 @@
 @import "./assets/sass/mixins";
 @import "animate.css/animate.min";
 
+// *{
+//     border: 2px solid red;
+// }
+
 :root {
     --blue:#1757b5;
     --gray: #fbfbfb;
@@ -18,6 +22,7 @@ body {
     font-weight: 400;
     position: relative;
     scroll-behavior: smooth;
+    background-color: #f8f9fe;
 }
 
 .pt-10{
@@ -30,14 +35,18 @@ h2 {
     display: inline-block;
     margin-bottom: 50px;
 
-    &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: var(--blue);
+    &:not(.swal2-title){
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: var(--blue);
+        }
+    
     }
 
+   
     @include for_breakpoint(1199) {
         font-size: 45px;
     }
