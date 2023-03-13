@@ -8,6 +8,7 @@ import { AboutMeComponent } from './components/Dashboard/about-me/about-me.compo
 import { ExperienceComponent } from './components/Dashboard/experience/experience.component';
 import { SkillsComponentD } from './components/Dashboard/skills/skills.component';
 import { ProyectosComponent } from './components/Dashboard/proyectos/proyectos.component';
+import { ContactComponent } from './components/Dashboard/contact/contact.component'
 
 const routes: Routes = [
   { path: '', component: HeaderComponent,},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'dashboard/experience', component: ExperienceComponent},
   { path: 'dashboard/skills', component: SkillsComponentD},
   { path: 'dashboard/proyectos',component: ProyectosComponent},
+  { path: 'dashboard/contacto', component:ContactComponent },
   { path: '**', pathMatch:'full',redirectTo: ''}
 ];
 

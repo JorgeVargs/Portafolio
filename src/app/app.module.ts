@@ -30,6 +30,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ProyectosComponent } from './components/Dashboard/proyectos/proyectos.component';
+import { ContactComponent } from './components/Dashboard/contact/contact.component';
 
 @NgModule({//decorador
   declarations: [
@@ -45,7 +46,8 @@ import { ProyectosComponent } from './components/Dashboard/proyectos/proyectos.c
     AboutMeComponent,
     ExperienceComponent,
     SkillsComponentD,
-    ProyectosComponent
+    ProyectosComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
