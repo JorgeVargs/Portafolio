@@ -22,7 +22,7 @@ export class WorkExperienceComponent implements OnInit {
     },
     {
       //publicidad en línea
-      logo:"./assets/images/clickspublicitarios.jpg",
+      logo:"./assets/images/publicidadenlinea.jpg",
       puesto:"Desarrollador Web",
       periodo:"2017 - 2019",
       descripcion:"Maquetación, integración, mantenimiento de sitios web."
