@@ -68,7 +68,6 @@ export class ExperienceComponent implements OnInit {
 
     const response = await this.companyService.addCompany(this.formExperience.value);
 
-    console.log(response);
   }
 
   async onClickDelete(company:ICompanys){

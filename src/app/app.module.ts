@@ -31,6 +31,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ProyectosComponent } from './components/Dashboard/proyectos/proyectos.component';
 import { ContactComponent } from './components/Dashboard/contact/contact.component';
+import { PresentationComponent } from './components/Dashboard/presentation/presentation.component';
 
 @NgModule({//decorador
   declarations: [
@@ -47,7 +48,8 @@ import { ContactComponent } from './components/Dashboard/contact/contact.compone
     ExperienceComponent,
     SkillsComponentD,
     ProyectosComponent,
-    ContactComponent
+    ContactComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,

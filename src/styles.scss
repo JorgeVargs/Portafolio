@@ -193,3 +193,16 @@ h2 {
         padding: 10% 0px;
     }
 }
+
+// breadcrumb
+
+nav{
+    .breadcrumb{
+        .breadcrumb-item{
+            a{
+                color: var(--blue-title);
+                font-weight: 600;
+            }
+        }
+    }
+}

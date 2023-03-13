@@ -9,10 +9,12 @@ import { ExperienceComponent } from './components/Dashboard/experience/experienc
 import { SkillsComponentD } from './components/Dashboard/skills/skills.component';
 import { ProyectosComponent } from './components/Dashboard/proyectos/proyectos.component';
 import { ContactComponent } from './components/Dashboard/contact/contact.component'
+import { PresentationComponent } from './components/Dashboard/presentation/presentation.component';
 
 const routes: Routes = [
   { path: '', component: HeaderComponent,},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard/presentation', component:PresentationComponent },
   { path: 'dashboard/about-me', component: AboutMeComponent},
   { path: 'dashboard/experience', component: ExperienceComponent},
   { path: 'dashboard/skills', component: SkillsComponentD},
