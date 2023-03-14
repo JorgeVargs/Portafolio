@@ -1,4 +1,4 @@
-<section class="header" [style.background-image]="'url('+ backheader +')'">
+<section class="header" [style]="'url('+ backheader +')'" [ngStyle]="{'background-image':backheader? 'url('+backheader+')':''}">
     <h1 class="animate__animated  animate__backInDown">{{titulo}}</h1>
     <h3 class="animate__animated animate__backInLeft animate__delay-1s">{{puesto}}</h3>
     <a href="{{ cv }}" target="_blank" class="btn btn-blue animate__animated animate__fadeInUp">Descargar CV</a>

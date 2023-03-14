@@ -12,6 +12,12 @@
         @include for_breakpoint(480) {
             margin: 20px auto;
         }
+
+        transition: scale .2s linear;
+
+        &:hover {
+          scale: 1.1;
+        }
     }
 
     p{

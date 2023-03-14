@@ -25,7 +25,8 @@ export class HeaderComponent implements OnInit {
     private _presentationService:PresentationService
   ) {
 
-    this.backheader = "";
+    this.backheader = "";//imagen background header
+
     this.titulo = "Luis Vargas";
     this.puesto = "Desarrollador Front-End";
     this.cv = "./assets/curriculum-vitae-jorge-luis-vargas.pdf";

@@ -28,6 +28,7 @@ export class NavbarComponent {
 
   @HostListener('window:scroll', []) onWindowScroll() {
     this.scrolled = window.pageYOffset > 150;
+    console.log(this.scrolled);
     if (this.scrolled) {
       this.isShown = false;
     } else {

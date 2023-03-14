@@ -19,9 +19,9 @@ export class ContactoComponent implements OnInit{
 
   initForm(){
     this.formDatos= new UntypedFormGroup({
-      nombre: new UntypedFormControl('',[Validators.required,Validators.minLength(10)]),
+      nombre: new UntypedFormControl('',[Validators.required,Validators.minLength(5)]),
       email: new UntypedFormControl('',[Validators.required,Validators.email]),
-      mensaje: new UntypedFormControl('',[Validators.required,Validators.minLength(10)])
+      mensaje: new UntypedFormControl('',[Validators.required,Validators.minLength(5)])
     })
   }
 
