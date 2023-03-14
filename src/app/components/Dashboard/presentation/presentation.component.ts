@@ -11,18 +11,18 @@ import Swal from 'sweetalert2';
 })
 export class PresentationComponent implements OnInit {
 
-  formPresentation:any;
-  idPresentation:any;
+  formPresentation: any;
+  idPresentation: any;
   imagebase64: string;
-  banner:string="";
+  banner: string = "";
 
-  mensaje:any;
+  mensaje: any;
 
   constructor(
-    private uploadFileService:UploadFileService,
-    private presentationService:PresentationService
+    private uploadFileService: UploadFileService,
+    private presentationService: PresentationService
   ) {
-    this.imagebase64 =  '';
+    this.imagebase64 = '';
     this.idPresentation = '';
   }
 
@@ -35,35 +35,47 @@ export class PresentationComponent implements OnInit {
     });
   }
 
-  initForm(){
+  initForm() {
     this.formPresentation = new FormGroup({
-      banner:new FormControl('',[Validators.required])
+      banner: new FormControl('', [Validators.required])
     })
   }
 
-   isValid(nombreControl:string){
-    return (this.formPresentation.get(nombreControl).invalid && this.formPresentation.get(nombreControl).touched) 
+  isValid(nombreControl: string) {
+    return (this.formPresentation.get(nombreControl).invalid && this.formPresentation.get(nombreControl).touched)
   }
 
-  
-  uploadFile(event:any):any{
+
+  uploadFile(event: any): any {
     const archivo = event.target.files[0];
-    
-    this.uploadFileService.extraerBase64(archivo).then((imagen:any) => {
+
+    this.uploadFileService.extraerBase64(archivo).then((imagen: any) => {
       this.imagebase64 = imagen.base;
       this.banner = imagen.base;
     });
   }
 
-  updatePresentation(){
-    if(this.imagebase64){
+  updatePresentation() {
+    if (this.imagebase64) {
       this.formPresentation.value.banner = this.imagebase64;
-    }else{
+    } else {
       this.formPresentation.value.banner = this.banner;
     }
-  
-   this.mensaje = this.presentationService.putPresentation(this.formPresentation.value,this.idPresentation);
-   console.log(this.mensaje);
+
+    this.presentationService.putPresentation(this.formPresentation.value, this.idPresentation).then(() => {
+      Swal.fire(
+        'Excelente!',
+        'Se han actualizado los datos correctamente!',
+        'success'
+      )
+    }, (error) => {
+      Swal.fire({
+        title: 'Error',
+        text: error,
+        icon: 'warning'
+      });
+    })
+
   }
 
 }

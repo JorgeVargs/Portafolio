@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutmeService } from 'src/app/services/aboutme.service';
+import { PresentationService } from 'src/app/services/presentation.service';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { AboutmeService } from 'src/app/services/aboutme.service';
 export class HeaderComponent implements OnInit {
   
   //header
+  public backheader:string;
   public titulo: string;
   public puesto: string;
   public cv: string;
@@ -19,8 +21,11 @@ export class HeaderComponent implements OnInit {
   public descripcion:string;
 
   constructor(
-    private _aboutmeService:AboutmeService
+    private _aboutmeService:AboutmeService,
+    private _presentationService:PresentationService
   ) {
+
+    this.backheader = "";
     this.titulo = "Luis Vargas";
     this.puesto = "Desarrollador Front-End";
     this.cv = "./assets/curriculum-vitae-jorge-luis-vargas.pdf";
@@ -28,6 +33,8 @@ export class HeaderComponent implements OnInit {
     this.fotografia = '';
     this.subtitle = '';
     this.descripcion = ''
+
+
    }
 
 
@@ -36,6 +43,10 @@ export class HeaderComponent implements OnInit {
       this.fotografia = about[0].fotografia;
       this.subtitle = about[0].titulo;
       this.descripcion = about[0].descripcion;
+    });
+
+    this._presentationService.getPresentation().subscribe(presentation => {
+      this.backheader = presentation[0].banner;
     })
   }
 }

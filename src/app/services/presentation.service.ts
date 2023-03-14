@@ -18,18 +18,10 @@ export class PresentationService {
     return collectionData(presentationRef,{idField:'id'}) as Observable<Presentation[]>;
   }
 
-  async putPresentation(presentation:Presentation,id:string){
+  putPresentation(presentation:Presentation,id:string){
     const presentationDocRef = doc(this.firestore,`presentation/${id}`);
-
-    try{
-      await setDoc(presentationDocRef,presentation);
-      return "success";
-    }catch(error){
-      return error;
-    }finally{
-      console.log("finish");
-    }
     
+    return setDoc(presentationDocRef,presentation);
   }
   
 }
