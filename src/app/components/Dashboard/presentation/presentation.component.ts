@@ -62,8 +62,8 @@ export class PresentationComponent implements OnInit {
       this.formPresentation.value.banner = this.banner;
     }
   
-   this.presentationService.putPresentation(this.formPresentation.value,this.idPresentation);
-
+   this.mensaje = this.presentationService.putPresentation(this.formPresentation.value,this.idPresentation);
+   console.log(this.mensaje);
   }
 
 }
