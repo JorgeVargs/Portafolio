@@ -62,7 +62,8 @@ export class PresentationComponent implements OnInit {
       this.formPresentation.value.banner = this.banner;
     }
 
-    this.presentationService.putPresentation(this.formPresentation.value, this.idPresentation).then(() => {
+    this.presentationService.putPresentation(this.formPresentation.value, this.idPresentation).
+    then(() => {
       Swal.fire(
         'Excelente!',
         'Se han actualizado los datos correctamente!',
