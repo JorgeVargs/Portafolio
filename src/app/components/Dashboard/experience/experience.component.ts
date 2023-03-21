@@ -3,6 +3,7 @@ import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } 
 import { ICompanys } from 'src/app/interfaces/ICompanys';
 import { CompanysService } from 'src/app/services/companys.service';
 import { DataServices } from 'src/app/services/data.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -70,9 +71,30 @@ export class ExperienceComponent implements OnInit {
 
   }
 
-  async onClickDelete(company:ICompanys){
-    const response = await this.companyService.deleteCompany(company);
-    console.log(response);
+  onClickDelete(company:ICompanys){
+
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: "Después de eliminarlo no podrás recuperarlo",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Sí, eliminalo'
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const response = await this.companyService.deleteCompany(company);
+        Swal.fire(
+          'Eliminado!',
+          'El regstro ha sido eliminado.',
+          'success'
+        )
+      }
+    })
+
+    //const response = await this.companyService.deleteCompany(company);
+    //console.log(response);
   }
 
 }
