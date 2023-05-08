@@ -6,7 +6,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6 col-sm-4 col-md-3" *ngFor="let skill of skills" [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.skill'">
+            <!-- [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.skill'" -->
+            <div class="col-6 col-sm-4 col-md-3" *ngFor="let skill of skills" >
                 <div class="skill">
                     <img src="{{ skill.logo }}" class="img-fluid" alt="{{ skill.tecnologia}}" title="{{ skill.tecnologia }}" />
                     <p>{{ skill.tecnologia }}</p>
