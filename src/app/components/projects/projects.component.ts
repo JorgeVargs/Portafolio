@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent{
   public proyectos:any = [
     {
+      screen:"./assets/images/proyectos/hotsale-aeromexico-rewards.jpg",
+      nombre:"Banners Hot Sale Aeromexico Rewards(Google)",
+      tecnologia:"Google Web Designer (HTML5)"
+    },
+    {
       screen:"./assets/images/proyectos/manuelgonzalez-165.jpg",
       nombre:"Manuel Gonzalez 165",
       tecnologia:"Angular, HTML5 & CSS3"
@@ -15,7 +20,8 @@ export class ProjectsComponent{
     {
       screen:"./assets/images/proyectos/anafloresabogada.png",
       nombre:"Ana Flores Abogada",
-      tecnologia:"Wordpress & Bootstrap"
+      tecnologia:"Wordpress & Bootstrap",
+      url:"https://anafloresabogada.com/"
     },
     {
       screen:"./assets/images/proyectos/superior-56.jpg",
