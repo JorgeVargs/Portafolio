@@ -1,0 +1,59 @@
+@import '../../../../assets/sass/mixins';
+
+.proyecto{
+    display: block;
+    text-decoration: none;
+    margin:30px 0px;
+    text-align: center;
+    
+    img{
+        margin: 30px auto;
+        @include boxshadow(5px 12px 25px 4px rgba(0,0,0,0.39));
+        @include for_breakpoint(480) {
+            margin: 20px auto;
+        }
+
+        transition: scale .2s linear;
+
+        &:hover {
+          scale: 1.1;
+        }
+    }
+
+    p{
+        text-align: center;
+        font-size: 22px;
+        color: black;
+
+        @include for_breakpoint(1399) {
+            font-size: 20px;
+        }
+        @include for_breakpoint(1199) {
+            font-size: 18px;
+        }
+        @include for_breakpoint(480) {
+            font-size: 16px;
+        }
+
+      
+
+        strong{
+            display: block;
+            font-size: 26px;
+
+            @include for_breakpoint(1399) {
+                font-size: 24px;
+            }
+            @include for_breakpoint(1199) {
+                font-size: 22px;
+            }
+            @include for_breakpoint(1199) {
+                font-size: 20px;
+            }
+            @include for_breakpoint(480) {
+                font-size: 18px;
+            }
+        }
+        
+    }
+}

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  
+
   public titulo: string;
   public puesto: string;
   public cv: string;
@@ -15,5 +15,5 @@ export class HeaderComponent {
     this.titulo = "Luis Vargas";
     this.puesto = "Desarrollador Front-End";
     this.cv = "./assets/curriculum-vitae-jorge-luis-vargas.pdf";
-   }
+  }
 }

@@ -1,0 +1,87 @@
+<section class="container menu-dash pt-10 pb-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <H1>Experiencia</H1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a [routerLink]="['/dashboard']">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Experiencia
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <form class="" [formGroup]="formExperience">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label for="imagecompany" class="form-label">Logo empresa</label>
+                        <input class="form-control" formControlName="imagecompany" id="imagecompany"  type="file" [ngClass]="{'is-invalid': isValid('imagecompany')}" (change)="CreateBase64String($event)" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <label for="puestocompany" class="visually">Puesto:</label>
+                        <input type="text" class="form-control" formControlName="puestocompany" id="puestocompany" [ngClass]="{'is-invalid': isValid('puestocompany')}" placeholder="" required/>
+                    </div>
+                    <div class="col-12">
+                        <label for="rangofechas" class="visually">Fechas:</label>
+                        <input type="text" class="form-control" formControlName="rangofechas" id="rangofechas" [ngClass]="{'is-invalid': isValid('rangofechas')}" placeholder="" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <textarea class="form-control mt-5" formControlName="descripcion" id="descripcion" [ngClass]="{'is-invalid': isValid('descripcion')}" placeholder="Descripción" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="d-grid gap-2 d-md-block">
+                        <button (click)="agregarCompany()"  [disabled]= "formExperience.invalid" class="btn btn-primary mt-5" type="button">Agregar</button>
+                      </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-7">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Logo</th>
+                    <th scope="col">Puesto</th>
+                    <th scope="col">Fechas</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let company of companys">
+                    <th scope="row">
+                        <img src="{{ company.imagecompany }}" class="img-fluid" />
+                    </th>
+                    <td>{{ company.puestocompany }}</td>
+                    <td>{{ company.rangofechas }}</td>
+                    <td>{{ company.descripcion }}</td>
+                    <td><button class="btn btn-danger" (click)="onClickDelete(company)">Borrar</button></td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+           
+        </div>
+    </div>
+</section>

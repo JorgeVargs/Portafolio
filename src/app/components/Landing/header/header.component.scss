@@ -1,0 +1,135 @@
+@import "../../../../assets/sass/mixins";
+
+.header {
+    background-image: url(../../../../assets/images/portafolio-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left:0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
+
+    @include for_breakpoint(1599) {
+        height: 900px;
+    }
+
+
+    @include for_breakpoint(1399) {
+        height: 800px;
+    }
+
+
+    @include for_breakpoint(991) {
+        height: 650px;
+    }
+
+      @include for_breakpoint(575) {
+        height: 550px;
+    }
+
+
+    h1 {
+        color: white;
+        font-weight: 600;
+        font-size: 150px;
+
+        @include for_breakpoint(1599) {
+            font-size: 140px;
+        }
+
+
+        @include for_breakpoint(1399) {
+            font-size: 100px;
+        }
+
+
+        @include for_breakpoint(991) {
+            font-size: 80px;
+        }
+
+
+        @include for_breakpoint(767) {
+            font-size: 70px;
+        }
+
+        @include for_breakpoint(480) {
+            font-size: 50px;
+        }
+    }
+
+    h3 {
+        color: white;
+        font-weight: 400;
+        font-size: 80px;
+
+        @include for_breakpoint(1599) {
+            font-size: 60px;
+        }
+
+
+        @include for_breakpoint(1399) {
+            font-size: 40px;
+        }
+
+
+        @include for_breakpoint(991) {
+            font-size: 30px;
+        }
+
+
+        @include for_breakpoint(767) {
+            font-size: 25px;
+        }
+    }
+
+    .btn-blue {
+        width: 320px;
+        height: 60px;
+        margin-top: 20px;
+
+        @include for_breakpoint(1599) {
+            width: 280px;
+            font-size: 28px;
+        }
+
+
+        @include for_breakpoint(1399) {
+            width: 250px;
+            font-size: 24px;
+        }
+
+         @include for_breakpoint(767) {
+            width: 220px;
+            font-size: 22px;
+            height: 55px;
+        }
+
+        @include for_breakpoint(479) {
+            width: 200px;
+        }
+    }
+}
+
+
+.about-me{
+    .imagen{
+        img{
+            width: 411px;
+        }
+    }
+}

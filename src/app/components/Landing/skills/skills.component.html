@@ -1,0 +1,17 @@
+<section id="habilidades" class="habilidades">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Habilidades</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-4 col-md-3" *ngFor="let skill of skills" [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.skill'">
+                <div class="skill">
+                    <img src="{{ skill.logo }}" class="img-fluid" alt="{{ skill.tecnologia}}" title="{{ skill.tecnologia }}" />
+                    <p>{{ skill.tecnologia }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
