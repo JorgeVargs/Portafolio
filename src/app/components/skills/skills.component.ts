@@ -63,6 +63,10 @@ export class SkillsComponent {
     {
       logo:"./assets/images/skills/mysql.png",
       nombre:"MYSQL"
+    },
+    {
+      logo:"./assets/images/skills/tailwindcss.png",
+      nombre:"Tailwindcss"
     }
   ];
 
