@@ -16,7 +16,6 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
 
 
 @NgModule({//decorador
@@ -28,8 +27,7 @@ import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.c
     SkillsComponent,
     ProjectsComponent,
     ContactoComponent,
-    FooterComponent,
-    DashboardComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

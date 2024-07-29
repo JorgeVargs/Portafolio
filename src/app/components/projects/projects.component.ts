@@ -8,19 +8,34 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent{
   public proyectos:any = [
     {
+      screen:"./assets/images/proyectos/cecoban.jpg",
+      nombre:"Cecoban",
+      tecnologia:"Bootstrap & Wordpress",
+      url:"https://www.cecoban.com/"
+    },
+    {
+      screen:"./assets/images/proyectos/grandcentral-165.jpg",
+      nombre:"Grand Central",
+      tecnologia:"Angular, HTML5 & CSS3",
+      url:"https://grandcentral165.com/"
+    },
+    {
       screen:"./assets/images/proyectos/manuelgonzalez-165.jpg",
       nombre:"Manuel Gonzalez 165",
-      tecnologia:"Angular, HTML5 & CSS3"
+      tecnologia:"Angular, HTML5 & CSS3",
+      url: "https://pruvimg165.com/"
     },
     {
       screen:"./assets/images/proyectos/anafloresabogada.png",
       nombre:"Ana Flores Abogada",
-      tecnologia:"Wordpress & Bootstrap"
+      tecnologia:"Wordpress & Bootstrap",
+      url: "https://anafloresabogada.com/"
     },
     {
       screen:"./assets/images/proyectos/superior-56.jpg",
       nombre:"Superior 56",
-      tecnologia:"Angular, HTML5 & CSS3"
+      tecnologia:"Angular, HTML5 & CSS3",
+      ulr:"https://www.superior56.com.mx/"
     },
     {
       screen:"./assets/images/proyectos/banners.png",
