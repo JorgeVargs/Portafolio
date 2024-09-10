@@ -1,0 +1,23 @@
+
+
+<section id="experiencia" class="experiencia">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Experiencia</h2>
+            </div>
+        </div>
+        <div class="row">
+            <owl-carousel-o [options]="owlOptions">
+                <ng-template carouselSlide *ngFor="let company of companys">
+                    <div class="slide card">
+                        <img src="{{ company.imagecompany }}" alt="Content 1">
+                        <h3>{{ company.puestocompany }}</h3>
+                        <h5>{{ company.rangofechas }}</h5>
+                        <p>{{ company.descripcion }}</p>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>

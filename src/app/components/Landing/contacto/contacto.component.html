@@ -1,0 +1,31 @@
+<section id="contacto" class="contacto">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="./assets/images/contacto-ilustracion.png" class="img-fluid" alt="Contacto" />
+            </div>
+            <div class="col-md-6 text-center">
+                <h2>Contacto</h2>
+
+                <form [formGroup]="formDatos" >
+                    <div class="mt-5">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" name="nombre" [ngClass]="{'is-invalid': isValid('nombre')}" formControlName="nombre" class="form-control">
+                    </div>
+                    <div class="mt-5">
+                        <label for="input_email" class="form-label">Correo:</label>
+                        <input type="email" name="email" [ngClass]="{'is-invalid': isValid('email')}" formControlName="email" class="form-control">
+                        <div class="invalid-feedback" *ngIf="formDatos.get('email').status == 'INVALID' && formDatos.get('email').touched">El email es incorrecto</div>
+                    </div>
+                    <div class="mt-5">
+                        <label for="input_mensaje" class="form-label">Mensaje</label>
+                        <textarea name="mensaje" class="form-control" [ngClass]="{'is-invalid': isValid('mensaje')}" formControlName="mensaje"
+                            id="input_mensaje" rows="3"></textarea>
+                    </div>
+                
+                    <button type="button" (click)="enviarFormulario()" [disabled]= "formDatos.invalid" class="btn btn-blue mt-5">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

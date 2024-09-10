@@ -1,0 +1,68 @@
+@import "./../../../../assets/sass/mixins";
+
+.experiencia {
+    background-color: var(--gray);
+    padding: 7% 0px;
+}
+
+.card {
+    max-width: 335px;
+    background-color: white;
+    padding: 30px 25px;
+    @include boxshadow( 0px 10px 19px -1px rgba(0,0,0,0.24));
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+    @include for_breakpoint(480) {
+        max-width: 300px;
+    }
+
+    img{
+        // margin:0 auto;
+    }
+
+    h3{
+        text-align:center;
+        color:var(--blue-title);
+        font-weight: 700;
+        margin-top:40px;
+        font-size:30px;
+        height: 75px;
+
+        @include for_breakpoint(767) {
+            font-size: 25px;
+            height: 55px;
+        }
+
+        @include for_breakpoint(480) {
+            font-size: 22px;
+            height: 50px;
+            margin-top: 25px;
+        }
+    }
+
+    h5{
+        text-align: center;
+        font-weight:300;
+        font-size: 24px;
+        margin:20px auto;
+
+        @include for_breakpoint(767) {
+            font-size: 22px;
+            
+        }
+    }
+
+    p{
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        height:120px;
+
+        @include for_breakpoint(767) {
+            font-size: 18px;
+        }
+    }
+}

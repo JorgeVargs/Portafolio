@@ -18,6 +18,11 @@ export class ProjectsComponent{
       nombre:"Grand Central",
       tecnologia:"Angular, HTML5 & CSS3",
       url:"https://grandcentral165.com/"
+    },{
+      screen:"./assets/images/proyectos/hotsale-aeromexico-rewards.jpg",
+      nombre:"Banners Hot Sale Aeromexico Rewards(Google)",
+      tecnologia:"Google Web Designer (HTML5)"
+
     },
     {
       screen:"./assets/images/proyectos/manuelgonzalez-165.jpg",
