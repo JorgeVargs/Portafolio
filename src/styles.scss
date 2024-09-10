@@ -11,6 +11,7 @@
     --blue:#1757b5;
     --gray: #fbfbfb;
     --blue-title: #0d3979;
+    --primary-color:#1757b5;
 }
 
 body {
@@ -31,7 +32,7 @@ h2 {
         display: block;
         width: 100%;
         height: 4px;
-        background-color: var(--blue);
+        background-color: var(--primary-color);;
     }
 
     @include for_breakpoint(1199) {
@@ -50,7 +51,7 @@ h2 {
 }
 
 .btn-blue {
-    background-color: var(--blue);
+    background-color: var(--primary-color);;
     color: white;
     font-weight: 300;
     font-size: 30px;
@@ -66,8 +67,8 @@ h2 {
     // @include boxshadow();
     &:hover {
         background-color: white;
-        color: var(--blue);
-        border-color: var(--blue);
+        color: var(--primary-color);;
+        border-color: var(--primary-color);;
     }
 }
 
@@ -79,13 +80,20 @@ h2 {
     }
 
     .owl-dots {
-        [class*="owl-"] {
+        .owl-dot {
             span {
-                background-color: var(--blue);
+                // background-color: var(--primary-color);;
                 width: 20px;
                 height: 20px;
             }
+            &.active{
+                span{
+                 background-color: var(--primary-color);;
+                }
+             }
         }
+
+        
     }
 }
 
@@ -117,7 +125,7 @@ h2 {
             left: -8%;
             width: 100%;
             height: 100%;
-            border: 8px solid var(--blue);
+            border: 8px solid var(--primary-color);;
             border-radius: 10px;
             z-index: 2;
 

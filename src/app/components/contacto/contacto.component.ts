@@ -36,7 +36,7 @@ export class ContactoComponent implements OnInit{
     const email = this.formDatos.value;
 
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      this.http.post('https://formspree.io/f/mqkwpjyy',
+      this.http.post('https://formspree.io/f/xdkngaqg',
         { name: email.nombre, replyto: email.email, message: email.mensaje },
         { 'headers': headers }).subscribe(
           (response: any) => {

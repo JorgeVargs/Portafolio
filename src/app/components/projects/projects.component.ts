@@ -35,7 +35,7 @@ export class ProjectsComponent{
       screen:"./assets/images/proyectos/superior-56.jpg",
       nombre:"Superior 56",
       tecnologia:"Angular, HTML5 & CSS3",
-      ulr:"https://www.superior56.com.mx/"
+      url:"https://www.superior56.com.mx/"
     },
     {
       screen:"./assets/images/proyectos/banners.png",

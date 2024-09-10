@@ -1,7 +1,8 @@
 @import "../../../assets/sass/mixins";
 
 .header {
-    background-image: url(../../../assets/images/header-portafolio.png);
+    // background-image: url(../../../assets/images/header-portafolio.png);
+    background-image: url(../../../assets/images/header-developer.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +29,7 @@
 
       @include for_breakpoint(575) {
         height: 550px;
+        background-position: right;
     }
 
 

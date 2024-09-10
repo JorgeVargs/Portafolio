@@ -38,7 +38,7 @@
     position: relative;
     margin-right: 20px;
     color: transparent;
-    background-color: var(--blue);
+    background-color: var(--primary-color);;
 
     .menu-icon {
       width: 40px;
@@ -110,7 +110,7 @@
 
       &.active {
         &::after {
-          background-color: var(--blue);
+          background-color: var(--primary-color);;
         }
       }
 
@@ -121,7 +121,7 @@
           color: white;
 
           &:hover {
-            color: var(--blue);
+            color: var(--primary-color);;
           }
         }
       }
@@ -135,7 +135,7 @@
 
       &:hover {
         &::after {
-          background-color: var(--blue);
+          background-color: var(--primary-color);;
         }
       }
     }
@@ -174,7 +174,7 @@
   &.small {
     height: 80px;
 
-    // background-color: var(--blue);
+    // background-color: var(--primary-color);;
     .navbar-brand {
       img {
         max-width: 60%;
