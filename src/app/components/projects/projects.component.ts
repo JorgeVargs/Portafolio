@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent{
   public proyectos:any = [
+     {
+      screen:"./assets/images/proyectos/la-dolce-backery.jpg",
+      nombre:"Grand Tower Polanco",
+      tecnologia:"Angular, HTML5 & CSS3",
+      url:"https://grandtowerpolanco.com/"
+    },
+     {
+      screen:"./assets/images/proyectos/la-dolce-backery.jpg",
+      nombre:"La Dolce Bakery",
+      tecnologia:"Bootstrap & Wordpress",
+      url:"https://ladolcenj.com/"
+    },
     {
       screen:"./assets/images/proyectos/cecoban.jpg",
       nombre:"Cecoban",
