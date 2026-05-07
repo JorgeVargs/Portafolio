@@ -14,6 +14,6 @@ export class HeaderComponent {
   constructor() {
     this.titulo = "Luis Vargas";
     this.puesto = "Desarrollador Front-End";
-    this.cv = "./assets/curriculum-vitae-jorge-luis-vargas.pdf";
+    this.cv = "./assets/jorge-luis-vargas-hernandez-2026.pdf";
   }
 }

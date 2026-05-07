@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent{
   public proyectos:any = [
      {
-      screen:"./assets/images/proyectos/la-dolce-backery.jpg",
+      screen:"./assets/images/proyectos/grand-tower-polanco.jpg",
       nombre:"Grand Tower Polanco",
       tecnologia:"Angular, HTML5 & CSS3",
       url:"https://grandtowerpolanco.com/"
@@ -51,8 +51,7 @@ export class ProjectsComponent{
     {
       screen:"./assets/images/proyectos/superior-56.jpg",
       nombre:"Superior 56",
-      tecnologia:"Angular, HTML5 & CSS3",
-      url:"https://www.superior56.com.mx/"
+      tecnologia:"Angular, HTML5 & CSS3"
     },
     {
       screen:"./assets/images/proyectos/banners.png",
@@ -62,26 +61,22 @@ export class ProjectsComponent{
      {
       screen:"./assets/images/proyectos/hersheys-reposteria.png",
       nombre:"hershey's Repostería",
-      tecnologia:"Bootstrap & Wordpress",
-      url:"https://hersheysreposteria.com.mx/reposteria-en-casa-hersheys/"
+      tecnologia:"Bootstrap & Wordpress"
     },
     {
       screen:"./assets/images/proyectos/hersheys-profesional.png",
       nombre:"hershey's Profesional",
-      tecnologia:"Bootstrap & Wordpress",
-      url:"https://hersheysreposteria.com.mx/profesional/"
+      tecnologia:"Bootstrap & Wordpress"
     },
      {
       screen:"./assets/images/proyectos/acento-mixcoac.png",
       nombre:"Acento Mixcoac",
-      tecnologia:"Landing Page: HTML, JQuery, CSS, PHP",
-      url:"https://www.acentomixcoac.com/"
+      tecnologia:"Landing Page: HTML, JQuery, CSS, PHP"
     },
     {
       screen:"./assets/images/proyectos/jorgevargsbooks.png",
       nombre:"Jorgevargsbooks",
-      tecnologia:"Materialize & Wordpress",
-      url:"https://jorgevargsbooks.com"
+      tecnologia:"Materialize & Wordpress"
     },
      {
       screen:"./assets/images/proyectos/msmedia.png",
@@ -99,7 +94,6 @@ export class ProjectsComponent{
       screen:"./assets/images/proyectos/periferico1991.png",
       nombre:"Landing Periferico 1991",
       tecnologia:"Landing Page: HTML, Jquery, CSS, PHP",
-      url:"https://my-home.mx/periferico1991/"
     },
     {
       screen:"./assets/images/proyectos/olimpiadasespeciales.png",

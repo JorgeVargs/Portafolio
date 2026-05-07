@@ -8,10 +8,16 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class WorkExperienceComponent implements OnInit {
   public companys:any = [
+     {
+      logo:"./assets/images/uceda.jpg",
+      puesto:"Front-End Developer",
+      periodo:"2024 - Actual",
+      descripcion:"Soporte y mantenimiento de sistema interno. Creación de nuevos módulos y funcionalidades."
+    },
     {
       logo:"./assets/images/valenetwork.jpg",
       puesto:"Programador Web",
-      periodo:"2020 - Actual",
+      periodo:"2020 - 2024",
       descripcion:"Maquetación e integración de sitios web. Creación de maillings y configuración de los mismos."
     },
     {

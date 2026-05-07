@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+     "baseUrl": "./",
     "paths": {
       "@core/sass/mixins": [
         "src/assets/sass/_mixins.scss"

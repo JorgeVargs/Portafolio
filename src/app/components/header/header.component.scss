@@ -34,6 +34,34 @@
       font-size: 50px;
     }
   
+   h1 {
+        color: white;
+        font-weight: 600;
+        font-size: 150px;
+
+        @include for_breakpoint(1599) {
+            font-size: 140px;
+        }
+
+
+        @include for_breakpoint(1399) {
+            font-size: 100px;
+        }
+
+
+        @include for_breakpoint(991) {
+            font-size: 80px;
+        }
+
+
+        @include for_breakpoint(767) {
+            font-size: 70px;
+        }
+
+        @include for_breakpoint(480) {
+            font-size: 50px;
+        }
+    }
 
   h3 {
     color: white;
